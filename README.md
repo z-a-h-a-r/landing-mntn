@@ -1,5 +1,5 @@
 # mntn
-The site is designed for layout training
+The site is developed for layout training
 
 > You can check this on: [z-a-h-a-r.github.io/site-mntn/](https://z-a-h-a-r.github.io/site-mntn/ "https://z-a-h-a-r.github.io/site-mntn/")  
 > Template: [here](https://www.figma.com/file/uboEHpA8KQcTZb435iWASk/MNTN---Landing-Page-%28Community%29?node-id=1:2)
