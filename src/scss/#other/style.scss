@@ -1,0 +1,23 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('../fonts/#{$file_name}.woff') format('woff'),
+			url('../fonts/#{$file_name}.woff2') format('woff2');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+body {
+	// height: 10000px;
+	overflow-x: hidden;
+}
+
+// * {
+// 	border: 1px rgb(179, 179, 179) solid;
+// }
+
+// font-family: 'Newsreader', serif;
+// font-family: 'Roboto Mono', monospace;
+// font-family: 'Crimson Text', serif;

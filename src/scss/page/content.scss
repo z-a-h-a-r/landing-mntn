@@ -1,0 +1,137 @@
+.content {
+	padding: 200px 0;
+	background: #0b1d26;
+	z-index: 100;
+	position: relative;
+	color: #fff;
+	display: grid;
+	grid-template: repeat(3, 1fr) / 1fr minmax(auto, 7fr) 1fr;
+
+	row-gap: 30vh;
+
+	.item {
+		grid-column: 2 / 3;
+		position: relative;
+
+		// =======================================
+
+		.spec-left {
+			left: 0;
+		}
+
+		// =======================================
+
+		@media (min-width: 992px) {
+			display: grid;
+			grid-template: 1fr / 1fr 1fr;
+
+			.spec-img {
+				order: 1;
+			}
+			.spec-text {
+				order: 2;
+			}
+		}
+		@media (max-width: 992px) {
+			.picture-wrap {
+				margin-top: 50px;
+			}
+			.picture img {
+				width: 100%;
+			}
+		}
+
+		// =======================================
+
+		.text {
+			padding: 0 20px 0 0;
+			position: relative;
+		}
+		.picture-wrap {
+			display: grid;
+			grid-auto-flow: row;
+			grid-template: 1fr / 1fr;
+		}
+		.picture {
+			position: relative;
+			padding: 0 0 90% 0;
+			cursor: pointer;
+
+			& img {
+				width: 90%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				object-fit: cover;
+			}
+		}
+
+		// =======================================
+
+		&__number {
+			position: absolute;
+			font-family: 'Roboto Mono', monospace;
+			font-weight: bold;
+			font-size: 240px;
+			color: #fff;
+			opacity: 0.1;
+			line-height: 100px;
+			left: 0;
+		}
+
+		&__slogan-wrap {
+			width: 100%;
+			display: flex;
+			align-items: center;
+		}
+		&__slogan-line {
+			width: 70px;
+			height: 2px;
+			background-color: #fbd784;
+		}
+		&__slogan-text {
+			font-family: 'Roboto Mono', monospace;
+			font-style: normal;
+			font-weight: 800;
+			font-size: 18px;
+			letter-spacing: 6px;
+			color: #fbd784;
+			display: block;
+			margin-left: 32px;
+		}
+
+		&__title {
+			margin-top: 40px;
+			font-family: Chronicle;
+			font-weight: 500;
+			font-size: 64px;
+			line-height: 55px;
+		}
+
+		&__text {
+			margin-top: 40px;
+
+			font-family: 'Roboto Mono', monospace;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 32px;
+		}
+
+		&__read {
+			margin: 40px 0 0 0;
+
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			letter-spacing: 2px;
+			color: #fbd784;
+			transition: 0.5s;
+			cursor: pointer;
+
+			&:hover {
+				color: #8f7b4d;
+			}
+		}
+	}
+}

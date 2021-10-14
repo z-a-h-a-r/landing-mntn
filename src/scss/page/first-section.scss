@@ -1,0 +1,217 @@
+.first-section {
+	display: block;
+	width: 100%;
+	height: 110vh;
+	position: relative;
+
+	// ================================
+
+	.bg-images {
+		width: 100%;
+		height: 110vh;
+		position: relative;
+
+		// ================================
+
+		&__clouds,
+		&__mountains,
+		&__human,
+		&__gradient {
+			position: absolute;
+			width: 100%;
+			height: 90vh;
+			left: 0;
+		}
+
+		&__clouds {
+			background: url(../img/first_section/HG.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top;
+
+			z-index: 1;
+		}
+		&__mountains {
+			background: url(../img/first_section/MG2.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0 0%;
+			bottom: 0;
+			z-index: 2;
+		}
+		&__human {
+			background: url(../img/first_section/VG2.png);
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			background-position: bottom;
+			z-index: 5;
+			bottom: 0;
+		}
+		&__gradient {
+			z-index: 3;
+			background: linear-gradient(
+				330.24deg,
+				rgba(11, 29, 38, 0) 31.06%,
+				#0b1d26 108.93%
+			);
+		}
+		@media (max-width: 992px) {
+			.bg-images__human {
+				background: url(../img/first_section/VG-mobile.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+				background-position: bottom;
+			}
+		}
+	}
+
+	// ================================
+
+	.fs-content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #fff;
+
+		.header {
+			position: relative;
+			z-index: 10;
+			padding: 64px 0 0 0;
+			display: grid;
+			grid-template: 1fr / 1fr minmax(auto, 5fr) 7fr minmax(auto, 5fr) 1fr;
+
+			&__logo {
+				grid-column: 2 / 3;
+				font-family: 'Crimson Text', serif;
+				font-size: 32px;
+
+				letter-spacing: 0.01em;
+				text-transform: capitalize;
+			}
+
+			&__menu {
+				grid-column: 3 / 4;
+
+				& ul {
+					display: grid;
+					justify-content: center;
+					grid-template: 1fr / repeat(3, 1fr);
+					height: 100%;
+					align-items: end;
+
+					& li {
+						text-align: center;
+						transition: 0.4s;
+
+						& a {
+							color: #fff;
+							font-style: normal;
+							font-weight: bold;
+							font-size: 16px;
+							font-family: 'Roboto Mono', monospace;
+						}
+
+						&:hover {
+							& a {
+								color: #fbd784;
+							}
+
+							padding: 0 0 10px 0;
+						}
+					}
+				}
+			}
+
+			&__account {
+				grid-column: 4 / 5;
+				display: grid;
+				justify-content: right;
+				align-items: end;
+				font-size: 14px;
+				line-height: 21px;
+				font-family: 'Roboto Mono', monospace;
+				color: #fff;
+				&:hover {
+					color: #fbd784;
+				}
+			}
+
+			@media (max-width: 772px) {
+				&__menu {
+					display: none;
+				}
+			}
+		}
+
+		.fs-body {
+			position: fixed;
+			padding: 100px 0 0 0;
+			display: grid;
+			grid-template: 1fr / 1fr minmax(auto, 6fr) 1fr;
+			z-index: 4;
+
+			@media (max-width: 992px) {
+				.fs-body__text-title {
+					margin-top: 20px;
+					font-size: 60px;
+					line-height: 60px;
+				}
+				.fs-body__text {
+					grid-column: 1 / 2;
+				}
+			}
+
+			&__text {
+				grid-column: 2 / 3;
+
+				.fs-body__text-slogan-wrap {
+					display: flex;
+					align-items: center;
+
+					.fs-body__text-slogan {
+						font-family: 'Roboto Mono', monospace;
+						font-style: normal;
+						font-weight: 800;
+						font-size: 18px;
+						line-height: 22px;
+						letter-spacing: 6px;
+						text-transform: uppercase;
+						color: #fbd784;
+						display: block;
+						margin-left: 32px;
+					}
+					.fs-body__text-slogan-line {
+						width: 70px;
+						height: 2px;
+						background-color: #fbd784;
+					}
+				}
+				.fs-body__text-title {
+					margin-top: 36px;
+					font-family: 'Crimson Text', serif;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 88px;
+					line-height: 100px;
+				}
+				.fs-body__text-subtitle {
+					font-style: normal;
+					font-weight: bold;
+					font-size: 18px;
+					font-family: 'Roboto Mono', monospace;
+					line-height: 22px;
+					margin-top: 20px;
+				}
+			}
+		}
+		@media (max-width: 992px) {
+			.fs-body {
+				grid-template: 1fr / 1fr;
+				padding: 10px;
+				margin-top: 50px;
+			}
+		}
+	}
+}
